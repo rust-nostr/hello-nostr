@@ -583,9 +583,9 @@ dependencies = [
 
 [[package]]
 name = "nostr"
-version = "0.19.1"
+version = "0.19.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a75c1aa60b04441c05220a3b338b8b5b983b979478744e9905c0b1bcfce4b84e"
+checksum = "24aa7f71193e1b617a294122ab2c038545cb19eedd7a2a4f4bc33124bb511b5c"
 dependencies = [
  "aes",
  "base64 0.21.0",
