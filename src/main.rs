@@ -24,7 +24,23 @@ async fn main() -> Result<()> {
     let event_id = client.publish_text_note(message, &[]).await?;
     println!("{}", event_id);
 
-    let filter = Filter::new().id(event_id);
+    // Retrieve only our last event (from both relays)
+    // let filter = Filter::new().id(event_id);
+
+    // Retrieve all the events that we have posted
+    let filter = Filter {
+        ids: None,
+        authors: Some(vec![my_keys.public_key()]),
+        kinds: None,
+        events: None,
+        pubkeys: None,
+        hashtags: None,
+        references: None,
+        search: None,
+        since: None,
+        until: None,
+        limit: None,
+    };
 
     time::sleep(Duration::from_secs(1)).await;
 
